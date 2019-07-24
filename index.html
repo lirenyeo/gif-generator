@@ -52,7 +52,7 @@
       imgContainer.innerHTML = '<img height="200" src="loading.gif" />'
       formBtn.innerText = 'Loading...'
       formBtn.disabled = true
-      fetch(`http://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchInput.value}&limit=${LIMIT}&offset=${Math.floor(Math.random() * 50)}`)
+      fetch(`https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${searchInput.value}&limit=${LIMIT}&offset=${Math.floor(Math.random() * 50)}`)
       .then(resp => resp.json())
       .then(result => {
         imgContainer.innerHTML = ''
